@@ -1,0 +1,24 @@
+ROUTINE TREINAMENTOPKG.EXERCICIO6
+EXERCICIO6
+
+    Read "Digite a data no formato DD/MM/YYYY: ", data  ; Lê a data no formato europeu
+    ; Converte a data do formato DD/MM/YYYY para o formato $Horolog
+    Set horolog = $ZDateH(data, 3)  ; Formato 3 (dd/mm/yyyy)
+
+    If horolog = "" {  ; Verifica se a conversão falhou
+        Write "Data inválida. Por favor, digite no formato correto (DD/MM/YYYY).", !
+        Quit
+    }
+
+    ; Exibe a data convertida para $Horolog
+    Write "Data em formato $Horolog: ", horolog, !
+
+    ; Converte a data para o formato islâmico (18)
+    Set dataIslamica = $ZDate(horolog, 18)
+    Write !, "Data no formato islâmico: ", dataIslamica, !
+
+    ; Extrai o nome do mês islâmico da data
+    Set mesIslamico = $Piece(dataIslamica, " ", 2)
+    Write "Mês Islâmico: ", mesIslamico, !
+
+    Quit

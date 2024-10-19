@@ -1,0 +1,7 @@
+ROUTINE TREINAMENTOPKG.EXERCICIO7
+EXERCICIO7
+	SET name = "Valdecir Luciano da Silva"
+	W name
+	W $length("Valdecir Luciano da Silva")
+	Write $Replace("Valdecir Luciano da Silva", " ", "|")
+	QUIT

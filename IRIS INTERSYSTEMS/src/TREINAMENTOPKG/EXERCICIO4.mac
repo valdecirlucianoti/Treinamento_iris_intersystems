@@ -1,0 +1,17 @@
+ROUTINE TREINAMENTOPKG.EXERCICIO4
+EXERCICIO4
+    ; Leitura dos dados do aluno
+    Read "Digite a matrícula do aluno: ", matricula
+    Read "Digite o nome completo do aluno: ", nomeCompleto
+    Read "Digite o telefone do aluno: ", telefone
+    Read "Digite a data de nascimento do aluno (dd/mm/aaaa): ", dataNascimento
+    Read "Digite o sexo do aluno (M/F): ", sexo
+
+    ; Exibição dos dados cadastrados
+    Write "Dados do Aluno:", !
+    Write "Matrícula: ", matricula, !
+    Write "Nome Completo: ", nomeCompleto, !
+    Write "Telefone: ", telefone, !
+    Write "Data de Nascimento: ", dataNascimento, !
+    Write "Sexo: ", sexo, !
+Quit

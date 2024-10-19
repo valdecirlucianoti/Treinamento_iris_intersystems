@@ -1,0 +1,35 @@
+ROUTINE TREINAMENTOPKG.EXERCICIO3
+EXERCICIO3
+    ; Solicita os números ao usuário
+    Read "Digite o valor de num1: ", num1
+    Read "Digite o valor de num2: ", num2
+    Read "Digite o valor de num3: ", num3
+    
+    ; Inicializa contadores e somas
+    Set contadorDiv11 = 0
+    Set contadorMultiplo3 = 0
+    Set somatodos = 0
+
+    ; Loop para verificar números entre num1 e num2
+    Write "Números entre ", num1, " e ", num2, " que são divisíveis por 11 com resto igual a 5:", !
+    for a = num1:1:num2 {
+        if a#11 = 5 {
+            Write a, " é divisível por 11 com resto igual a 5", !
+            Set contadorDiv11 = contadorDiv11 + 1  ;
+        }
+        Set somatodos = somatodos + a
+    }
+    
+    ; Loop para verificar múltiplos de 3 entre num2 e num3
+    Write "Números entre ", num2, " e ", num3, " que são múltiplos de 3:", !
+    for a = num2:1:num3 {
+        if a#3 = 0 {
+            Write a, " é múltiplo de ", 3, !  ; Exibe o número
+            Set contadorMultiplo3 = contadorMultiplo3 + 1  ; Incrementa o contador
+        }
+    }
+
+    ; Resultados finais
+    Write "Quantidade de números entre ", num1, " e ", num2, " que são divisíveis por 11 com resto igual a 5: ", contadorDiv11, !
+    Write "Quantidade de números múltiplos de 3 entre ", num2, " e ", num3, ": ", contadorMultiplo3, !
+    Write "O valor da soma de todos os números entre ", num1, " e ", num2, " é ", somatodos, !

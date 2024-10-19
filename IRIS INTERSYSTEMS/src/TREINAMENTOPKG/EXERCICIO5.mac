@@ -1,0 +1,41 @@
+ROUTINE TREINAMENTOPKG.EXERCICIO5
+Exercício5
+
+    set x = ""
+    write !,"Digite o número de alunos a cadastrar: "
+    read x
+
+    for i = 1:1:x {
+        write !,"Cadastro do aluno ", i, ":"
+        
+        ; Lê os dados do aluno
+        write "Digite a matrícula do aluno: "
+        read ^tAluno(i, "matricula")
+        
+        write "Digite o nome completo do aluno: "
+        read ^tAluno(i, "nomeCompleto")
+        
+        write "Digite o telefone do aluno: "
+        read ^tAluno(i, "telefone")
+        
+        write "Digite a data de nascimento do aluno (dd/mm/aaaa): "
+        read ^tAluno(i, "dataNascimento")
+        
+        write "Digite o sexo do aluno (M/F): "
+        read ^tAluno(i, "sexo")
+    }
+
+    write !,"Dados cadastrados dos alunos:", !
+    for i = 1:1:x {
+        write !,"Aluno ", i, ":"
+        write "Matrícula: ", ^tAluno(i, "matricula"), !
+        write "Nome Completo: ", ^tAluno(i, "nomeCompleto"), !
+        write "Telefone: ", ^tAluno(i, "telefone"), !
+        write "Data de Nascimento: ", ^tAluno(i, "dataNascimento"), !
+        write "Sexo: ", ^tAluno(i, "sexo"), !
+        write !  ; Adiciona uma linha em branco entre os alunos
+    }
+
+    write "Cadastro concluído com sucesso!", !
+
+    quit

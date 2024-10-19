@@ -1,13 +1,19 @@
 ROUTINE TREINAMENTOPKG.EXERCICIO1
-
 EXERCICIO1
     Read "Digite o valor de X: ", X
     Read "Digite o valor de Y: ", Y
 
+    Set contador = 0  ; Inicializa o contador
+
     for a = X:1:Y {
-        if a#2 = 0 {
+        if a#2 = 0 {  ; Verifica se é par
+            
             Write a, " É par", !
-        } else {
-            Write a, " É ímpar", !
+        }
+        
+        if a#10 = 0 {  ; Verifica se é par e múltiplo de 10
+            Set contador = contador + 1  ; Incrementa o contador
         }
     }
+
+    Write "Quantidade de números pares divisíveis por 10 entre ", X, " e ", Y, ": ", contador, !
