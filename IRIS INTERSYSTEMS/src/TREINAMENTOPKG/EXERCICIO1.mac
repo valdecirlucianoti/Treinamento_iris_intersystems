@@ -1,0 +1,13 @@
+ROUTINE TREINAMENTOPKG.EXERCICIO1
+
+EXERCICIO1
+    Read "Digite o valor de X: ", X
+    Read "Digite o valor de Y: ", Y
+
+    for a = X:1:Y {
+        if a#2 = 0 {
+            Write a, " É par", !
+        } else {
+            Write a, " É ímpar", !
+        }
+    }

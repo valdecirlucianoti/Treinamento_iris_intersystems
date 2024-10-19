@@ -1,0 +1,3 @@
+ROUTINE TREINAMENTOPKG.HelloWord
+HelloWord; teste
+	W "Hello World new (1+1)", ! 

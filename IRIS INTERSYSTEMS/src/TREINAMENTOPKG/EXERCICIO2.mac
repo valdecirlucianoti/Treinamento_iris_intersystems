@@ -1,0 +1,14 @@
+ROUTINE TREINAMENTOPKG.EXERCICIO2
+EXERCICIO2
+    Read "Digite o valor de X: ", X
+    Read "Digite o valor de Y: ", Y
+
+    Set contador = 0  ; Inicializa o contador
+
+    for a = X:1:Y {
+        if a#2 = 0 && a#10 = 0 {  ; Verifica se é par e múltiplo de 10
+            Set contador = contador + 1  ; Incrementa o contador
+        }
+    }
+
+    Write "Quantidade de números pares múltiplos de 10 entre ", X, " e ", Y, ": ", contador, !
